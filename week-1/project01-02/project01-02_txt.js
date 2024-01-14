@@ -2,8 +2,8 @@
     Chapter 1
     Hands-On Project 1-2
 
-    Author: 
-    Date:   
+    Author: Bernice Templeman
+    Date: January 10, 2024
 
     Filename: project01-02.js
 */
