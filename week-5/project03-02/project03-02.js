@@ -24,3 +24,35 @@ captions[10] = "Maneuvering in space with the Canadarm2 [2006]";
 captions[11] = "The International Space Station second expansion [2006]";
 captions[12] = "The International Space Station third expansion [2007]";
 captions[13] = "The ISS over the Ionian Sea [2007]";
+
+let htmlCode = "";
+
+for (i = 0; i < captions.length; i++) {
+  // Formatted by Prettier
+  // “Using the backtick character (`) creates a structure known as a template literal: Note however that both the text and the line return are part of the text string”
+  // Carey, Patrick; Vodnik, Sasha. JavaScript for Web Warriors (p. 50). Course Technology Inc. Kindle Edition.
+  //
+  // With each iteration, add the following text to the value of the htmlCode variable
+  //  htmlCode +=
+  //  `<figure>
+  //    <img alt='' src='slide` + i + `.jpg' />
+  //    <figcaption>` + captions[i] + `</figcaption>
+  //  </figure>
+  //
+  //  `;
+
+  htmlCode +=
+    `<figure>
+    <img alt='' src='slide` +
+    i +
+    `.jpg' />
+    <figcaption>` +
+    captions[i] +
+    `</figcaption>
+  </figure>
+
+  `;
+}
+
+//change the inner HTML of the document element by the id "gallery" to the value of the htmlCode variable
+document.getElementById("gallery").innerHTML = htmlCode;
