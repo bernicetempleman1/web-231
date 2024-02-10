@@ -18,11 +18,13 @@ const SALAD_PRICE = 7.95;
 const SALES_TAX = 0.07;
 
 //event handler that runs the calcTotal() function when  the element is clicked.
-document.getElementById("chicken").onclick = calcTotal;
-document.getElementById("halibut").onclick = calcTotal;
-document.getElementById("burger").onclick = calcTotal;
-document.getElementById("salmon").onclick = calcTotal;
-document.getElementById("salad").onclick = calcTotal;
+// updated to 'onchange' event listener instead of 'onclick'.
+// The 'onchange' event is generally more suitable for detecting input changes.
+document.getElementById("chicken").onchange = calcTotal;
+document.getElementById("halibut").onchange = calcTotal;
+document.getElementById("burger").onchange = calcTotal;
+document.getElementById("salmon").onchange = calcTotal;
+document.getElementById("salad").onchange = calcTotal;
 
 //function to calculate the total
 function calcTotal(){
