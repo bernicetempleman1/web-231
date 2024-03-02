@@ -63,13 +63,13 @@ let fieldCount = formElements.length;
 // Declare the errorBox referencing the element with the id “errorBox”.
 let errorBox = document.getElementById("errorBox");
 
-// For loop that iterates through each element in the formElements node list
+// For loop that iterates through each element in the formElements node list.
 for (let i = 0; i < fieldCount; i++) {
   // Apply an event listener that calls the showValidationError() function in response to the invalid event.
   formElements[i].addEventListener("invalid", showValidationError);
 }
 
-// Function showValidationError(evt) to apply custom error message instead of browser default messages
+// Function showValidationError(evt) to apply custom error message instead of browser default messages.
 function showValidationError(evt) {
   // For the event object, evt, apply the preventDefault() method to prevent the browser from applying the  native browser tools to respond to invalid data.
   evt.preventDefault();
