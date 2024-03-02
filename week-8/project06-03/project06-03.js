@@ -20,7 +20,6 @@ useShip.addEventListener("change", copyShippingToBilling);
 function copyShippingToBilling() {
   // Test whether useShip is checked
   if (useShip.checked) {
-
     // Set the value of the firstnameBill field to the value of the firstnameShip field.
     document.getElementById("firstnameBill").value =
       document.getElementById("firstnameShip").value;
@@ -69,7 +68,6 @@ for (let i = 0; i < fieldCount; i++) {
   // Apply an event listener that calls the showValidationError() function in response to the invalid event.
   formElements[i].addEventListener("invalid", showValidationError);
 }
-
 
 // Function showValidationError(evt) to apply custom error message instead of browser default messages
 function showValidationError(evt) {
