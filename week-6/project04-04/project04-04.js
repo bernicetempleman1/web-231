@@ -51,9 +51,8 @@ function runTheRegister() {
 
     // Determine the units of currency needed for the change
     calcChange(changeValue);
-
   } catch (error) {
-    // Within the catch statement set the innerHTML of the element with the id “warning” to the value of thrown  exception. 
+    // Within the catch statement set the innerHTML of the element with the id “warning” to the value of thrown  exception.
     document.getElementById("warning").innerHTML = error;
   }
 }
