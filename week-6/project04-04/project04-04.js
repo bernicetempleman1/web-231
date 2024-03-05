@@ -39,14 +39,21 @@ function runTheRegister() {
 
   let changeValue = cashBox.value - billBox.value; // calculate the change
 
+  // If the bill is greater than the cash amount, no change can be  given.
+  // Handle this user error by adding a try catch statement to the runTheRegister() function.
   try {
-    if (changeValue < 0) throw "Cash amount doesn't cover the bill";
+    // Within the try statement test if changeValue is not greater than or equal to zero.
+    // If that condition is true, throw an exception with the error message “Cash amount doesn’t cover the bill”.
+    if (!(changeValue >= 0)) throw "Cash amount doesn't cover the bill";
 
-    changeBox.value = formatCurrency(changeValue); // format the change as currency
+    // format the change as currency
+    changeBox.value = formatCurrency(changeValue);
 
-    calcChange(changeValue); // Determine the units of currency needed for the change
-    
+    // Determine the units of currency needed for the change
+    calcChange(changeValue);
+
   } catch (error) {
+    // Within the catch statement set the innerHTML of the element with the id “warning” to the value of thrown  exception. 
     document.getElementById("warning").innerHTML = error;
   }
 }
