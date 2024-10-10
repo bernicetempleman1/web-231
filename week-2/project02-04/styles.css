@@ -221,3 +221,19 @@ aside span#totalBill {
   width: 100px;
   text-align: right;
 }
+
+.button-link {
+  display: flex;
+
+  margin: 0 auto;
+  background-color: #008cba;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  height: 25px;
+  width: 100px;
+}
+.button-link:hover {
+  background-color: #04aa6d; /* Green */
+  color: white;
+}
